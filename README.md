@@ -2,4 +2,4 @@
 
 ## Organização dos arquivos:
 
-- Documentos: documentação sobre a aplicação (requisitos, casos de uso...)
+- Requisitos da aplicação: documentação sobre a aplicação (funcionamento da empresa, entrevista, requisitos, casos de uso...)
