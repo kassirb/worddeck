@@ -4,17 +4,17 @@ Word Deck é um aplicativo de estudos proposto para auxiliar no aprendizado da l
 
 ## Autores
 
-Estudante: Gabriel Pietro de Souza
-Email: gabriel.souza@estudante.uffs.edu.br
-Matrícula: 2221101067
+Estudante: Gabriel Pietro de Souza\
+Email: gabriel.souza@estudante.uffs.edu.br\
+Matrícula: 2221101067\\
 
-Estudante: Julya Brustolin Marssona
-Email: julya.marssona@estudante.uffs.edu.br
-Matrícula: 2221101068
+Estudante: Julya Brustolin Marssona\
+Email: julya.marssona@estudante.uffs.edu.br\
+Matrícula: 2221101068\\
 
-Estudante: Kassiara Regina Bosing
-Email: kassiara.bosing@estudante.uffs.edu.br
-Matrícula: 2121101062
+Estudante: Kassiara Regina Bosing\
+Email: kassiara.bosing@estudante.uffs.edu.br\
+Matrícula: 2121101062\\
 
 ## Organização dos arquivos:
 
