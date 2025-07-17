@@ -1,0 +1,90 @@
+psql -U postgres -h localhost -d postgres
+
+CREATE DATABASE worddeck;
+\c worddeck;
+
+CREATE TABLE usuario (
+  email VARCHAR PRIMARY KEY,
+  nome VARCHAR NOT NULL,
+  telefone VARCHAR(15),
+  data_nascimento DATE,
+  senha VARCHAR NOT NULL
+);
+
+CREATE TABLE feedback(
+  assunto VARCHAR NOT NULL,
+  descricao VARCHAR NOT NULL,
+  datao DATE,
+  usuario VARCHAR REFERENCES usuario(email)
+);
+
+CREATE TABLE traducao_alt (
+  palavra VARCHAR NOT NULL,
+  traducao_alt VARCHAR PRIMARY KEY
+);
+
+CREATE TABLE caso_de_uso (
+  palavra VARCHAR NOT NULL,
+  frase VARCHAR PRIMARY KEY
+);
+
+CREATE TABLE palavra (
+  nome VARCHAR PRIMARY KEY,
+  audio BYTEA,
+  categoria VARCHAR,
+  traducao_literal VARCHAR,
+  traducao_alternativa VARCHAR REFERENCES traducao_alt(traducao_alt),
+  casos_de_uso VARCHAR REFERENCES caso_de_uso(frase)
+);
+
+CREATE TABLE professor (
+  usuario VARCHAR PRIMARY KEY REFERENCES usuario(email),
+  primeira_lingua VARCHAR,
+  segunda_lingua VARCHAR
+);
+
+CREATE TABLE aluno (
+  usuario VARCHAR PRIMARY KEY REFERENCES usuario(email),
+  objetivo_geral VARCHAR,
+  objetivo_treino_diario VARCHAR
+);
+
+CREATE TABLE tema (
+  nome VARCHAR PRIMARY KEY,
+  descricao VARCHAR,
+  palavra VARCHAR REFERENCES palavra(nome)
+);
+
+CREATE TABLE pratica (
+  data DATE PRIMARY KEY,
+  duracao INT,
+  aluno VARCHAR REFERENCES aluno(usuario)
+);
+
+CREATE TABLE avaliacao (
+  estrelas INT,
+  descricao VARCHAR,
+  pratica_avaliada DATE REFERENCES pratica(data),
+  professor VARCHAR REFERENCES professor(usuario)
+);
+
+CREATE TABLE vinculo_aluno_professor (
+  aluno VARCHAR REFERENCES aluno(usuario),
+  professor VARCHAR REFERENCES professor(usuario),
+  data_vinculo DATE
+);
+
+CREATE TABLE vinculo_aluno_tema (
+  aluno VARCHAR REFERENCES aluno(usuario),
+  tema VARCHAR REFERENCES tema(nome),
+  data_vinculo DATE
+);
+
+CREATE TABLE vinculo_pratica_palavra (
+  audio BYTEA,
+  tempo INT,
+  classificacao INT,
+  acerto BOOLEAN,
+  palavra VARCHAR REFERENCES palavra(nome),
+  pratica DATE REFERENCES pratica(data)
+);
