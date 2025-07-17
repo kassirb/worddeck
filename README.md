@@ -21,3 +21,4 @@ Matrícula: 2121101062
 - Requisitos da aplicação: documentação sobre a aplicação (funcionamento da empresa, entrevista, requisitos, casos de uso...).
 - Conceptual Model: modelo fonte criado na ferramenta brModelo e imagem correspondente ao modelo conceitual criado.
 - Relational Logical Model: modelo lógico relacional criado na ferramenta DBDiagram.io.
+- Physical Model: scripts de criação (criadb) e população (populadb) do banco de dados, compatíveis com Postgres.
