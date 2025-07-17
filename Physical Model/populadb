@@ -1,0 +1,68 @@
+
+insert into usuario (email, nome, telefone, data_nascimento, senha) values
+  (‘kassiara@uffs',’Kassiara Bosing’,’49988888888’,’2001-12-14’,’12345678’),
+  (‘denio@uffs',’Denio Duarte’,’49977777777’,’2001-01-01’,’12345678’),
+  (‘geomar@uffs',’Geomar’,’49966666666’,’2002-02-02’,’12345678’),
+  (‘fulano@uffs',’Fulano’,’49955555555’,’2003-03-03’,’12345678’),
+  (‘ciclano@uffs',’Ciclano’,’49944444444’,’2004-04-04’,’12345678’),
+  (‘giancarlo@uffs’,’Giancarlo’,’49933333333’,’2005-05-05’,’12345678’);
+
+insert into professor (usuario, primeira_lingua, segunda_lingua) values
+  (‘denio@uffs’,‘Português’,‘Inglês’),
+  (‘geomar@uffs’,‘Português’,‘Espanhol’),
+  (‘giancarlo@uffs’,’Português’,’Alemão’);
+
+insert into aluno (usuario, objetivo_geral, objetivo_treino_diario) values
+  (‘kassiara@uffs’,’Inglês fluente’,’Aprender 1 palavra nova por dia‘),
+  (‘fulano@uffs’,’Espanhol fluente’,’30 minutos diários‘),
+  (‘ciclano@uffs’,’Alemão fluente’,’Aprender 2 palavras novas por dia‘);
+
+insert into traducao_alt (palavra, traducao_alt) values
+  (‘Where’,’Aonde’),
+  (‘Still’,’Mesmo assim’),
+  (‘Even’,’Nem sequer’),
+  (‘Just’,’Agora mesmo, Exatamente’),
+  (‘How’,’Quanto, Quão’),
+  (‘Live’,’Morar’),
+  (‘Break’,’Fazer uma pausa’),
+  (‘Watch’,’Observar, Vigiar’),
+  (‘Play’,’Brincar, Tocar’),
+  (‘Turn’,’Girar, Fazer aniversário’);
+
+insert into caso_de_uso (palavra, frase) values
+  (‘Where’,’Where do you live?’),
+  (‘Still’,’He still loves her / It was late, but they still went out’),
+  (‘Even’,’She can even sing opera! / He didnt even say goodbye’),
+  (‘Just’,’Its just a game / Thats just what I needed’),
+  (‘How’,’How does it work? / How much did it cost?’),
+  (‘Live’,’I live in a small town’),
+  (‘Break’,’Dont break the glass! / Lets break for lunch’),
+  (‘Watch’,’Watch the baby carefully’),
+  (‘Play’, ‘She plays the piano’),
+  (‘Turn’,’Turn left / He turned 30 yesterday’);
+
+insert into palavra (nome, audio, categoria, traducao_literal, traducao_alternativa, casos_de_uso) values
+  (‘Where’,NULL,’Advérbio’,’Onde’,’Where’,’Where’),
+  (‘Still’,NULL,’Advérbio’,’Ainda’,’Still’,’Still’),
+  (‘Even’,NULL,’Advérbio’,’Até mesmo’,’Even’,’Even’),
+  (‘Just’,NULL,’Advérbio’,’Apenas’,’Just’,’Just’),
+  (‘How’,NULL,‘Advérbio’,‘Como’,’How’,’How’),
+  (‘Live’,NULL,’Verbo’,’Viver’,’Live’,’Live’),
+  (‘Break’,NULL,’Verbo’,’Quebrar’,’Break’,’Break’),
+  (‘Watch’,NULL,’Verbo’,’Assistir’,’Watch’,’Watch’),
+  (‘Play’,NULL,’Verbo’,’Jogar’,’Play’,’Play’),
+  (‘Turn’,NULL,’Verbo’,’Virar’,’Turn’,’Turn’);
+
+insert into tema (nome, descricao, palavra) values
+  (‘Verbos’,’Verbos’,’Live, Break, Watch, Play, Turn’),
+  (‘Advérbios’,’Advérbios’,’Where, How’);
+
+insert into vinculo_aluno_professor (aluno, professor, data_vinculo) values
+  (‘fulano@uffs’,’denio@uffs’,’2023-03-03’),
+  (‘ciclano@uffs’,’geomar@uffs’,’2024-04-04’),
+  (‘kassiara@uffs’,’giancarlo@uffs’,’2025-05-05’);
+
+insert into vinculo_aluno_tema (aluno, tema, data_vinculo) values
+  (‘fulano@uffs’,’Verbos’,’2023-03-03’),
+  (‘ciclano@uffs’,’Advérbios’,’2024-04-04’),
+  (‘kassiara@uffs’,’Verbos’,’2025-05-05’);
