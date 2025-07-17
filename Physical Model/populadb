@@ -54,8 +54,8 @@ insert into palavra (nome, audio, categoria, traducao_literal, traducao_alternat
   (‘Turn’,NULL,’Verbo’,’Virar’,’Turn’,’Turn’);
 
 insert into tema (nome, descricao, palavra) values
-  (‘Verbos’,’Verbos’,’Live, Break, Watch, Play, Turn’),
-  (‘Advérbios’,’Advérbios’,’Where, How’);
+  (‘Verbos’,’Verbos’,’Live’),
+  (‘Advérbios’,’Advérbios’,’Where’);
 
 insert into vinculo_aluno_professor (aluno, professor, data_vinculo) values
   (‘fulano@uffs’,’denio@uffs’,’2023-03-03’),
