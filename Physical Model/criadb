@@ -19,13 +19,13 @@ CREATE TABLE feedback(
 );
 
 CREATE TABLE traducao_alt (
-  palavra VARCHAR NOT NULL,
-  traducao_alt VARCHAR PRIMARY KEY
+  palavra VARCHAR PRIMARY KEY,
+  traducao_alt VARCHAR
 );
 
 CREATE TABLE caso_de_uso (
-  palavra VARCHAR NOT NULL,
-  frase VARCHAR PRIMARY KEY
+  palavra VARCHAR PRIMARY KEY,
+  frase VARCHAR
 );
 
 CREATE TABLE palavra (
@@ -33,8 +33,8 @@ CREATE TABLE palavra (
   audio BYTEA,
   categoria VARCHAR,
   traducao_literal VARCHAR,
-  traducao_alternativa VARCHAR REFERENCES traducao_alt(traducao_alt),
-  casos_de_uso VARCHAR REFERENCES caso_de_uso(frase)
+  traducao_alternativa VARCHAR REFERENCES traducao_alt(palavra),
+  casos_de_uso VARCHAR REFERENCES caso_de_uso(palavra)
 );
 
 CREATE TABLE professor (
